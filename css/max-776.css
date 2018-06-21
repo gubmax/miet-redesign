@@ -1,0 +1,118 @@
+ul.navbar {
+	text-align: center;
+}
+ul.navbar > li > a {
+	box-sizing: border-box;
+  width: auto;
+	padding: 0 16px;
+}
+div.logo-subtitle {
+  display: none;
+}
+div.sidebar,
+div.page,
+div.news-feed {
+  display: block;
+}
+ul.sidebar-menu {
+  padding: 0;
+}
+
+/**
+* Header menu
+*/
+div.header-menu {
+  position: inherit;
+	top: auto;
+	right: auto;
+  max-height: 0;
+	transition: max-height .2s;
+	overflow: hidden;
+}
+div.header-menu > a {
+	width: 100%;
+  padding: 0 20px;
+	border-bottom: 1px solid #2c3e50;
+}
+div.header-menu.active {
+  max-height: 20em;
+}
+div.language-bar {
+	margin: 8px;
+}
+
+/**
+* Header menu button
+*/
+.header-menu-btn {
+  display: inline-block;
+	float: right;
+  width: 28px;
+  height: 20px;
+	margin: 20px 16px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.header-menu-btn span:after,
+.header-menu-btn span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+.header-menu-btn span:after {
+  top: 18px;
+}
+.header-menu-btn span {
+  position: relative;
+  display: block;
+}
+.header-menu-btn span,
+.header-menu-btn span:after,
+.header-menu-btn span:before {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.header-menu-btn.on span {
+  background-color: transparent;
+}
+.header-menu-btn.on span:before {
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+.header-menu-btn.on span:after {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+/**
+* Sidebar Menu
+*/
+span.sidebar-menu-toggle {
+	display: block;
+	position: relative;
+	line-height: 36px;
+	padding: 0 24px;
+	cursor: pointer;
+}
+span.sidebar-menu-toggle::after {
+ content: '';
+ position: absolute;
+ left: 168px;
+ top: 16px;
+ border: 6px solid transparent;
+ border-top: 6px solid #fff;
+}
+span.sidebar-menu-toggle.on {
+	background: #394961;
+}
+ul.sidebar-menu {
+  max-height: 0;
+	transition: max-height .2s;
+	overflow: hidden;
+}
+ul.sidebar-menu.active {
+  max-height: 47em;
+}
